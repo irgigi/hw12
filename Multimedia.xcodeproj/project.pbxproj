@@ -10,9 +10,13 @@
 		863675D72AD01E7000DA6723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863675D62AD01E7000DA6723 /* AppDelegate.swift */; };
 		863675D92AD01E7000DA6723 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863675D82AD01E7000DA6723 /* SceneDelegate.swift */; };
 		863675DB2AD01E7000DA6723 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863675DA2AD01E7000DA6723 /* ViewController.swift */; };
-		863675DE2AD01E7000DA6723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863675DC2AD01E7000DA6723 /* Main.storyboard */; };
 		863675E02AD01E7200DA6723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863675DF2AD01E7200DA6723 /* Assets.xcassets */; };
 		863675E32AD01E7200DA6723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863675E12AD01E7200DA6723 /* LaunchScreen.storyboard */; };
+		863675EB2AD045CC00DA6723 /* Элтон Джон - Your song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675EA2AD045CC00DA6723 /* Элтон Джон - Your song.mp3 */; };
+		863675ED2AD045D900DA6723 /* Spice Girls - Too Much.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675EC2AD045D900DA6723 /* Spice Girls - Too Much.mp3 */; };
+		863675EF2AD045E800DA6723 /* Scorpions - Send Me An Angel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675EE2AD045E700DA6723 /* Scorpions - Send Me An Angel.mp3 */; };
+		863675F12AD045EE00DA6723 /* Oasis - Wonderwall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675F02AD045EE00DA6723 /* Oasis - Wonderwall.mp3 */; };
+		863675F32AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +24,14 @@
 		863675D62AD01E7000DA6723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863675D82AD01E7000DA6723 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		863675DA2AD01E7000DA6723 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		863675DD2AD01E7000DA6723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		863675DF2AD01E7200DA6723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		863675E22AD01E7200DA6723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		863675E42AD01E7200DA6723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863675EA2AD045CC00DA6723 /* Элтон Джон - Your song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Элтон Джон - Your song.mp3"; sourceTree = "<group>"; };
+		863675EC2AD045D900DA6723 /* Spice Girls - Too Much.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Spice Girls - Too Much.mp3"; sourceTree = "<group>"; };
+		863675EE2AD045E700DA6723 /* Scorpions - Send Me An Angel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scorpions - Send Me An Angel.mp3"; sourceTree = "<group>"; };
+		863675F02AD045EE00DA6723 /* Oasis - Wonderwall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oasis - Wonderwall.mp3"; sourceTree = "<group>"; };
+		863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mylene Farmer - L'amour N'est Rien.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,14 @@
 				863675D62AD01E7000DA6723 /* AppDelegate.swift */,
 				863675D82AD01E7000DA6723 /* SceneDelegate.swift */,
 				863675DA2AD01E7000DA6723 /* ViewController.swift */,
-				863675DC2AD01E7000DA6723 /* Main.storyboard */,
 				863675DF2AD01E7200DA6723 /* Assets.xcassets */,
 				863675E12AD01E7200DA6723 /* LaunchScreen.storyboard */,
 				863675E42AD01E7200DA6723 /* Info.plist */,
+				863675EA2AD045CC00DA6723 /* Элтон Джон - Your song.mp3 */,
+				863675EC2AD045D900DA6723 /* Spice Girls - Too Much.mp3 */,
+				863675EE2AD045E700DA6723 /* Scorpions - Send Me An Angel.mp3 */,
+				863675F02AD045EE00DA6723 /* Oasis - Wonderwall.mp3 */,
+				863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */,
 			);
 			path = Multimedia;
 			sourceTree = "<group>";
@@ -125,9 +137,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863675F32AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 in Resources */,
+				863675EF2AD045E800DA6723 /* Scorpions - Send Me An Angel.mp3 in Resources */,
 				863675E32AD01E7200DA6723 /* LaunchScreen.storyboard in Resources */,
+				863675ED2AD045D900DA6723 /* Spice Girls - Too Much.mp3 in Resources */,
 				863675E02AD01E7200DA6723 /* Assets.xcassets in Resources */,
-				863675DE2AD01E7000DA6723 /* Main.storyboard in Resources */,
+				863675EB2AD045CC00DA6723 /* Элтон Джон - Your song.mp3 in Resources */,
+				863675F12AD045EE00DA6723 /* Oasis - Wonderwall.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		863675DC2AD01E7000DA6723 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				863675DD2AD01E7000DA6723 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		863675E12AD01E7200DA6723 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,9 +299,7 @@
 				INFOPLIST_FILE = Multimedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,9 +324,7 @@
 				INFOPLIST_FILE = Multimedia/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

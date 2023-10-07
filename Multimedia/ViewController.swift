@@ -1,19 +1,133 @@
 //
 //  ViewController.swift
 //  Multimedia
-//
-//  Created by Мамуля on 06.10.2023.
-//
+
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    private var audioPlayer: AVAudioPlayer!
+    private var counter = 0
+    var songs = ["Элтон Джон - Your song", "Spice Girls - Too Much", "Scorpions - Send Me An Angel", "Oasis - Wonderwall", "Mylene Farmer - L'amour N'est Rien"]
+    
+    private lazy var soundButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(soundAction), for: .touchUpInside)
+        button.setImage(UIImage(named: "play"), for: .normal)
+        return button
+    }()
+    
+    private lazy var stopButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(stopAction), for: .touchUpInside)
+        button.setImage(UIImage(named: "stop"), for: .normal)
+        return button
+    }()
+    
+    private lazy var nextButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+        button.setImage(UIImage(named: "next"), for: .normal)
+        return button
+    }()
+    
+    private lazy var nameSongLabel: UILabel = {
+        let label = UILabel()
+        label.text = songs[counter]
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .lightGray
         // Do any additional setup after loading the view.
+        setupAudioPlayer()
+        setup()
     }
-
-
+    
+    @objc func soundAction() {
+        if audioPlayer.isPlaying {
+            audioPlayer.stop()
+            soundButton.setImage(UIImage(named: "play"), for: .normal)
+        } else {
+            audioPlayer.play()
+            soundButton.setImage(UIImage(named: "pause"), for: .normal)
+        }
+    }
+    
+    @objc func stopAction() {
+        audioPlayer.stop()
+        soundButton.setImage(UIImage(named: "play"), for: .normal)
+        audioPlayer.currentTime = 0.0
+    }
+    
+    @objc func nextAction() {
+        soundButton.setImage(UIImage(named: "play"), for: .normal)
+        if counter == songs.count - 1 {
+            counter = 0
+        } else {
+            counter += 1
+        }
+        nameSongLabel.text = songs[counter]
+        setupAudioPlayer()
+    }
+    
+    private func setupAudioPlayer() {
+        
+        guard let musicUrl = Bundle.main.url(forResource: songs[counter], withExtension: "mp3") else { return }
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: musicUrl)
+            setupAudioSession()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func setupAudioSession() {
+        let audioSession = AVAudioSession.sharedInstance()
+        
+        do {
+            try audioSession.setCategory(.playback)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func setup() {
+        view.addSubview(soundButton)
+        view.addSubview(stopButton)
+        view.addSubview(nextButton)
+        view.addSubview(nameSongLabel)
+        
+        soundButton.translatesAutoresizingMaskIntoConstraints = false
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        nameSongLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        NSLayoutConstraint.activate([
+            
+            nameSongLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            nameSongLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            
+            soundButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            soundButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            soundButton.trailingAnchor.constraint(equalTo: stopButton.leadingAnchor, constant: -10),
+            
+            stopButton.trailingAnchor.constraint(equalTo: nextButton.leadingAnchor, constant: -20),
+            stopButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stopButton.leadingAnchor.constraint(equalTo: soundButton.trailingAnchor),
+            
+            nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            nextButton.leadingAnchor.constraint(equalTo: stopButton.trailingAnchor),
+            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
+            
+        ])
+        
+    }
+    
 }
 
