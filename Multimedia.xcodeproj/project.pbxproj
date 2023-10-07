@@ -17,6 +17,7 @@
 		863675EF2AD045E800DA6723 /* Scorpions - Send Me An Angel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675EE2AD045E700DA6723 /* Scorpions - Send Me An Angel.mp3 */; };
 		863675F12AD045EE00DA6723 /* Oasis - Wonderwall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675F02AD045EE00DA6723 /* Oasis - Wonderwall.mp3 */; };
 		863675F32AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */; };
+		864C75312AD10C5A00594541 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C75302AD10C5A00594541 /* YouTubeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		863675EE2AD045E700DA6723 /* Scorpions - Send Me An Angel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scorpions - Send Me An Angel.mp3"; sourceTree = "<group>"; };
 		863675F02AD045EE00DA6723 /* Oasis - Wonderwall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oasis - Wonderwall.mp3"; sourceTree = "<group>"; };
 		863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mylene Farmer - L'amour N'est Rien.mp3"; sourceTree = "<group>"; };
+		864C75302AD10C5A00594541 /* YouTubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				863675D62AD01E7000DA6723 /* AppDelegate.swift */,
 				863675D82AD01E7000DA6723 /* SceneDelegate.swift */,
 				863675DA2AD01E7000DA6723 /* ViewController.swift */,
+				864C75302AD10C5A00594541 /* YouTubeViewController.swift */,
 				863675DF2AD01E7200DA6723 /* Assets.xcassets */,
 				863675E12AD01E7200DA6723 /* LaunchScreen.storyboard */,
 				863675E42AD01E7200DA6723 /* Info.plist */,
@@ -156,6 +159,7 @@
 			files = (
 				863675DB2AD01E7000DA6723 /* ViewController.swift in Sources */,
 				863675D72AD01E7000DA6723 /* AppDelegate.swift in Sources */,
+				864C75312AD10C5A00594541 /* YouTubeViewController.swift in Sources */,
 				863675D92AD01E7000DA6723 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,13 +38,33 @@ class ViewController: UIViewController {
         label.text = songs[counter]
         return label
     }()
+    
+    private lazy var youTubeButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(nextController), for: .touchUpInside)
+        button.setImage(UIImage(named: "next"), for: .normal)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
-        // Do any additional setup after loading the view.
+        //view.backgroundColor = .lightGray
+        
+        loadBackgroundImage()
+    
         setupAudioPlayer()
         setup()
+    }
+    
+    private func loadBackgroundImage() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "back")
+        backgroundImage.contentMode = .scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
+    
+    @objc func nextController() {
+        
     }
     
     @objc func soundAction() {
