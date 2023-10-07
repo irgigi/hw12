@@ -10,7 +10,10 @@ class ViewController: UIViewController {
     
     private var audioPlayer: AVAudioPlayer!
     private var counter = 0
-    var songs = ["Элтон Джон - Your song", "Spice Girls - Too Much", "Scorpions - Send Me An Angel", "Oasis - Wonderwall", "Mylene Farmer - L'amour N'est Rien"]
+    // данные файлов
+    var array = Songs.songsArray()
+    
+    //MARK: - свойства
     
     private lazy var soundButton: UIButton = {
         let button = UIButton()
@@ -35,20 +38,21 @@ class ViewController: UIViewController {
     
     private lazy var nameSongLabel: UILabel = {
         let label = UILabel()
-        label.text = songs[counter]
+        label.text = array[counter].title//songs[counter]
         return label
     }()
     
     private lazy var youTubeButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(nextController), for: .touchUpInside)
-        button.setImage(UIImage(named: "next"), for: .normal)
+        button.setImage(UIImage(named: "youtube"), for: .normal)
         return button
     }()
+    
+    //MARK: - методы
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .lightGray
         
         loadBackgroundImage()
     
@@ -64,7 +68,10 @@ class ViewController: UIViewController {
     }
     
     @objc func nextController() {
-        
+        let youController = YouTubeViewController()
+        youController.modalTransitionStyle = .coverVertical
+        youController.modalPresentationStyle = .pageSheet
+        present(youController, animated: true, completion: nil)
     }
     
     @objc func soundAction() {
@@ -85,18 +92,18 @@ class ViewController: UIViewController {
     
     @objc func nextAction() {
         soundButton.setImage(UIImage(named: "play"), for: .normal)
-        if counter == songs.count - 1 {
+        if counter == array.count - 1 {
             counter = 0
         } else {
             counter += 1
         }
-        nameSongLabel.text = songs[counter]
+        nameSongLabel.text = array[counter].title
         setupAudioPlayer()
     }
     
     private func setupAudioPlayer() {
         
-        guard let musicUrl = Bundle.main.url(forResource: songs[counter], withExtension: "mp3") else { return }
+        guard let musicUrl = Bundle.main.url(forResource: array[counter].title, withExtension: "mp3") else { return }
         
         do {
             try audioPlayer = AVAudioPlayer(contentsOf: musicUrl)
@@ -121,11 +128,13 @@ class ViewController: UIViewController {
         view.addSubview(stopButton)
         view.addSubview(nextButton)
         view.addSubview(nameSongLabel)
+        view.addSubview(youTubeButton)
         
         soundButton.translatesAutoresizingMaskIntoConstraints = false
         stopButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nameSongLabel.translatesAutoresizingMaskIntoConstraints = false
+        youTubeButton.translatesAutoresizingMaskIntoConstraints = false
         
         
         NSLayoutConstraint.activate([
@@ -143,7 +152,10 @@ class ViewController: UIViewController {
             
             nextButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             nextButton.leadingAnchor.constraint(equalTo: stopButton.trailingAnchor),
-            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100)
+            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -100),
+            
+            youTubeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            youTubeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
             
         ])
         
