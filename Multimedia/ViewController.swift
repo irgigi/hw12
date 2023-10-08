@@ -49,18 +49,24 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private lazy var audioButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(audioAction), for: .touchUpInside)
+        button.setImage(UIImage(named: "record"), for: .normal)
+        return button
+    }()
+    
+    
     //MARK: - методы
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadBackgroundImage()
-    
         setupAudioPlayer()
         setup()
     }
     
-    private func loadBackgroundImage() {
+    public func loadBackgroundImage() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "back")
         backgroundImage.contentMode = .scaleAspectFill
@@ -101,6 +107,15 @@ class ViewController: UIViewController {
         setupAudioPlayer()
     }
     
+    @objc func audioAction() {
+        
+        let audioController = AudioViewController()
+        navigationController?.pushViewController(audioController, animated: true)
+
+
+    }
+
+    
     private func setupAudioPlayer() {
         
         guard let musicUrl = Bundle.main.url(forResource: array[counter].title, withExtension: "mp3") else { return }
@@ -129,18 +144,23 @@ class ViewController: UIViewController {
         view.addSubview(nextButton)
         view.addSubview(nameSongLabel)
         view.addSubview(youTubeButton)
+        view.addSubview(audioButton)
         
         soundButton.translatesAutoresizingMaskIntoConstraints = false
         stopButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nameSongLabel.translatesAutoresizingMaskIntoConstraints = false
         youTubeButton.translatesAutoresizingMaskIntoConstraints = false
+        audioButton.translatesAutoresizingMaskIntoConstraints = false
         
         
         NSLayoutConstraint.activate([
             
+            audioButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            audioButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+            
             nameSongLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nameSongLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+            nameSongLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 250),
             
             soundButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             soundButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),

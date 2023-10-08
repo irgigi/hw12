@@ -19,6 +19,7 @@
 		863675F32AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */; };
 		864C75312AD10C5A00594541 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C75302AD10C5A00594541 /* YouTubeViewController.swift */; };
 		864C75352AD163A500594541 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C75342AD163A500594541 /* Songs.swift */; };
+		864C75372AD19EFA00594541 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864C75362AD19EFA00594541 /* AudioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		863675F22AD045F400DA6723 /* Mylene Farmer - L'amour N'est Rien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mylene Farmer - L'amour N'est Rien.mp3"; sourceTree = "<group>"; };
 		864C75302AD10C5A00594541 /* YouTubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		864C75342AD163A500594541 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
+		864C75362AD19EFA00594541 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				864C75342AD163A500594541 /* Songs.swift */,
 				863675DA2AD01E7000DA6723 /* ViewController.swift */,
 				864C75302AD10C5A00594541 /* YouTubeViewController.swift */,
+				864C75362AD19EFA00594541 /* AudioViewController.swift */,
 				863675DF2AD01E7200DA6723 /* Assets.xcassets */,
 				863675E12AD01E7200DA6723 /* LaunchScreen.storyboard */,
 				863675E42AD01E7200DA6723 /* Info.plist */,
@@ -165,6 +168,7 @@
 				863675D72AD01E7000DA6723 /* AppDelegate.swift in Sources */,
 				864C75312AD10C5A00594541 /* YouTubeViewController.swift in Sources */,
 				863675D92AD01E7000DA6723 /* SceneDelegate.swift in Sources */,
+				864C75372AD19EFA00594541 /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Multimedia/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Разрешить доступ к микрофону";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -330,6 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Multimedia/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Разрешить доступ к микрофону";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
